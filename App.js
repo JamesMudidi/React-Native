@@ -92,7 +92,7 @@ export default class FetchExample extends React.Component {
                   <Picker.Item label="Divide" value="/" />
                 </Picker>
               </View>
-              <TouchableOpacity onPress={() => this.submit()} style={[styles.button]}>
+              <TouchableOpacity onPress={() => this.submit()}>
                 <Text style={[styles.button]}> Calculate </Text>
               </TouchableOpacity>
             </View>
