@@ -61,7 +61,6 @@ export default class FetchExample extends React.Component {
       .catch((error) => {
         console.warn(error);
       });
-
   }
 
   render() {
