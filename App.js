@@ -66,21 +66,29 @@ export default class FetchExample extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+
         <View style={[styles.header]}>
           <Text style={[styles.headerFont]}> Simple Calculator </Text>
         </View>
+
         <View style={[styles.section]}>
           <View style={[styles.calculation]}>
             <View style={[styles.inputBox]}>
+
               <Text style={[styles.whiteFont]}> Number One </Text>
+
               <TextInput style={[styles.input]}
                 style={[styles.input]}
                 onChangeText={(text) => this.updateValue(text, 'number1')} />
+
               <Text style={[styles.whiteFont]}> Number Two </Text>
+
               <TextInput style={[styles.input]}
                 style={[styles.input]}
                 onChangeText={(text) => this.updateValue(text, 'number2')} />
+
               <Text style={[styles.whiteFont]}> Operation </Text>
+
               <View style={[styles.pickerBox]}>
                 <Picker style={[styles.pickerText]} onValueChange={(text) => this.updateValue(text, 'operator')}>
                   <Picker.Item label="Operator" />
@@ -90,6 +98,7 @@ export default class FetchExample extends React.Component {
                   <Picker.Item label="Divide" value="/" />
                 </Picker>
               </View>
+
               <TouchableOpacity onPress={() => this.submit()}>
                 <Text style={[styles.button]}> Calculate </Text>
               </TouchableOpacity>
