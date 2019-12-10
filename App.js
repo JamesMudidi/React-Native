@@ -46,7 +46,6 @@ export default class FetchExample extends React.Component {
     console.warn(postData);
 
     url = `http://api.mathjs.org/v4/ &{postData}`;
-    console.warn(url);
 
     fetch((url), {
       method: 'POST',
