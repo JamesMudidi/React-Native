@@ -26,5 +26,4 @@ Once the application has started, you now have to view the application to see ho
 
 > #### Two | Using an emulator
 > - For the IOS simulator, follow this [guide](https://docs.expo.io/versions/v36.0.0/workflow/ios-simulator/). This only works on computers running the MacOS.
-
 > - For the Android Studio simulator, here is a [guide](https://docs.expo.io/versions/v36.0.0/workflow/android-studio-emulator/).
