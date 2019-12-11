@@ -3,7 +3,6 @@ import {
   TouchableOpacity,
   View,
   Text,
-  Alert,
   StyleSheet,
   TextInput,
   Picker,
@@ -45,7 +44,7 @@ export default class FetchExample extends React.Component {
     }
     console.warn(postData);
 
-    url = `http://api.mathjs.org/v4/ &{postData}`;
+    url = `http://api.mathjs.org/v4/&{postData}`;
 
     fetch((url), {
       method: 'POST',
