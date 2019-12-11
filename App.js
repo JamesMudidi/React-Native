@@ -70,7 +70,6 @@ export default class FetchExample extends React.Component {
           <Text style={[styles.headerFont]}> Simple Calculator </Text>
         </View>
 
-        <View style={[styles.section]}>
           <View style={[styles.calculation]}>
             <View style={[styles.inputBox]}>
 
@@ -102,7 +101,6 @@ export default class FetchExample extends React.Component {
                 <Text style={[styles.button]}> Calculate </Text>
               </TouchableOpacity>
             </View>
-          </View>
         </View>
         <View style={[styles.results]}>
           <Text style={[styles.resultsTitle]}> Results </Text>
@@ -188,7 +186,8 @@ const styles = StyleSheet.create({
   calculation: {
     width: '95%',
     height: 290,
-    margin: 10,
+    marginLeft: 10,
+    marginTop: 50,
     backgroundColor: '#28353E',
     marginBottom: 10,
     borderRadius: 5
