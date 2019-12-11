@@ -20,11 +20,10 @@ To have the App up and running, follow the simple steps below.
 Once the application has started, you now have to view the application to see how it will appear on different devices like IOS or Android. There are different ways of how to achieve this goal as explained below.
 
 > #### One | Using your phone
-> - Download and Install the Expo Client app to your phone [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www), [IOS](https://apps.apple.com/app/apple-store/id982107779).
+> - Download and Install the Expo Client app to your phone [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www) or [IOS](https://apps.apple.com/app/apple-store/id982107779).
 > - Start the application on your phone.
 > - Scan the QR code provided in the Expo Dev Tools console on your computer.
 
 > #### Two | Using an emulator
 > - For the IOS simulator, follow this [guide](https://docs.expo.io/versions/v36.0.0/workflow/ios-simulator/). This only works on computers running the MacOS.
-
 > - For the Android Studio simulator, here is a [guide](https://docs.expo.io/versions/v36.0.0/workflow/android-studio-emulator/).
