@@ -89,7 +89,7 @@ export default class FetchExample extends React.Component {
 
             <View style={[styles.pickerBox]}>
               <Picker style={[styles.pickerText]} on={(text) => this.updateValue(text, 'operator')}>
-                {/* <Picker.Item label="Operator" /> */}
+                <Picker.Item label="Operator" />
                 <Picker.Item label="Add" value="+" />
                 <Picker.Item label="Subtrat" value="-" />
                 <Picker.Item label="Multiply" value="*" />
@@ -102,12 +102,15 @@ export default class FetchExample extends React.Component {
             </TouchableOpacity>
           </View>
         </View>
+
         <View style={[styles.results]}>
           <Text style={[styles.resultsTitle]}> Results </Text>
         </View>
+
         <View style={[styles.fail]}>
           <Text style={[styles.resultsText]}> Results </Text>
         </View>
+        
         <View style={[styles.pass]}>
           <Text style={[styles.resultsText]}> Results </Text>
         </View>
