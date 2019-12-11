@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from 'react-native-elements';
 import {
   TouchableOpacity,
   View,
@@ -70,46 +71,47 @@ export default class FetchExample extends React.Component {
           <Text style={[styles.headerFont]}> Simple Calculator </Text>
         </View>
 
-        <View style={[styles.section]}>
-          <View style={[styles.calculation]}>
-            <View style={[styles.inputBox]}>
+        <View style={[styles.calculation]}>
+          <View style={[styles.inputBox]}>
 
-              <Text style={[styles.whiteFont]}> Number One </Text>
+            <Text style={[styles.whiteFont]}> Number One </Text>
 
-              <TextInput style={[styles.input]}
-                style={[styles.input]}
-                onChangeText={(text) => this.updateValue(text, 'number1')} />
+            <TextInput style={[styles.input]}
+              style={[styles.input]}
+              onChangeText={(text) => this.updateValue(text, 'number1')} />
 
-              <Text style={[styles.whiteFont]}> Number Two </Text>
+            <Text style={[styles.whiteFont]}> Number Two </Text>
 
-              <TextInput style={[styles.input]}
-                style={[styles.input]}
-                onChangeText={(text) => this.updateValue(text, 'number2')} />
+            <TextInput style={[styles.input]}
+              style={[styles.input]}
+              onChangeText={(text) => this.updateValue(text, 'number2')} />
 
-              <Text style={[styles.whiteFont]}> Operation </Text>
+            <Text style={[styles.whiteFont]}> Operation </Text>
 
-              <View style={[styles.pickerBox]}>
-                <Picker style={[styles.pickerText]} onValueChange={(text) => this.updateValue(text, 'operator')}>
-                  <Picker.Item label="Operator" />
-                  <Picker.Item label="Add" value="+" />
-                  <Picker.Item label="Subtrat" value="-" />
-                  <Picker.Item label="Multiply" value="*" />
-                  <Picker.Item label="Divide" value="/" />
-                </Picker>
-              </View>
-
-              <TouchableOpacity onPress={() => this.submit()}>
-                <Text style={[styles.button]}> Calculate </Text>
-              </TouchableOpacity>
+            <View style={[styles.pickerBox]}>
+              <Picker style={[styles.pickerText]} on={(text) => this.updateValue(text, 'operator')}>
+                <Picker.Item label="Operator" />
+                <Picker.Item label="Add" value="+" />
+                <Picker.Item label="Subtrat" value="-" />
+                <Picker.Item label="Multiply" value="*" />
+                <Picker.Item label="Divide" value="/" />
+              </Picker>
             </View>
+
+            <TouchableOpacity onPress={() => this.submit()}>
+              <Text style={[styles.button]}> Calculate </Text>
+            </TouchableOpacity>
           </View>
         </View>
+
         <View style={[styles.results]}>
           <Text style={[styles.resultsTitle]}> Results </Text>
         </View>
+
         <View style={[styles.fail]}>
           <Text style={[styles.resultsText]}> Results </Text>
         </View>
+        
         <View style={[styles.pass]}>
           <Text style={[styles.resultsText]}> Results </Text>
         </View>
@@ -144,6 +146,9 @@ const styles = StyleSheet.create({
     color: '#fff'
   },
   whiteFont: {
+    marginBottom: -5,
+    marginLeft: 20,
+    marginTop: -5,
     color: '#fff',
     fontSize: 13
   },
@@ -165,7 +170,9 @@ const styles = StyleSheet.create({
     color: '#ECBC13',
   },
   button: {
-    margin: 10,
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 5,
     height: 35,
     textAlign: "center",
     textAlignVertical: "center",
@@ -178,20 +185,29 @@ const styles = StyleSheet.create({
     borderRadius: 20
   },
   input: {
+    fontSize: 15,
     padding: 10,
     height: 35,
     margin: 10,
+    color: '#ECBC13',
     borderColor: '#ECBC13',
     borderWidth: 1,
     borderRadius: 20
   },
   calculation: {
     width: '95%',
-    height: 290,
-    margin: 10,
+    paddingTop: 15,
+    height: 275,
+    marginLeft: 10,
+    marginTop: 60,
     backgroundColor: '#28353E',
     marginBottom: 10,
-    borderRadius: 5
+    borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,  
+    elevation: 5
   },
   results: {
     width: '95%',
@@ -203,27 +219,37 @@ const styles = StyleSheet.create({
   },
   resultsTitle: {
     fontSize: 15,
-    color: '#28353E',
+    color: '#A88818',
     top: 10
   },
   resultsText: {
-    fontSize: 15,
+    fontSize: 12,
     color: '#000',
     top: 10
   },
   fail: {
     width: '95%',
-    height: 110,
+    height: 120,
     backgroundColor: '#FFAEA0',
     marginLeft: 10,
-    marginBottom: 5,
+    marginBottom: 10,
     borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,  
+    elevation: 5
   },
   pass: {
     width: '95%',
-    height: 110,
+    height: 120,
     backgroundColor: '#FFE28A',
     marginLeft: 10,
     borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,  
+    elevation: 5
   },
 });
